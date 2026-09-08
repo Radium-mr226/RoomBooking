@@ -2,6 +2,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\RoomBooking.Logic\RoomBooking.Logic.csproj" />
+    <ProjectReference Include="..\RoomBooking.Data\RoomBooking.Data.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

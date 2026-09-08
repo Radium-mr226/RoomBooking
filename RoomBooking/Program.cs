@@ -1,6 +1,10 @@
-﻿using RoomBooking.Logic;
+﻿using RoomBooking.Data;
+using RoomBooking.Logic;
 
-var service = new BookingService();
+IBookingRepository repository = new BookingRepository();
+
+var service = new BookingService(repository);
+
 Console.WriteLine("Отображенные записи: ");
 
 foreach (var item in service.GetImportant())
