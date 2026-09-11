@@ -4,3 +4,6 @@ obj/
 *.user
 *.suo
 
+
+RoomBooking/bin/Debug/net8.0/booking.json
+RoomBooking/bin/Debug/net8.0/booking.xml

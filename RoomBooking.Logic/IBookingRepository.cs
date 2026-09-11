@@ -9,5 +9,6 @@ namespace RoomBooking.Logic
     public interface IBookingRepository
     {
         List<Booking> GetAll();
+        void Add(Booking item);
     }
 }

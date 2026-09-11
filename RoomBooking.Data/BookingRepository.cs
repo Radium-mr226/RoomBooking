@@ -20,5 +20,10 @@ namespace RoomBooking.Data
         {
             return _Rooms;
         }
+
+        public void Add(Booking item)
+        {
+            _Rooms.Add(item);
+        }
     }
 }

@@ -21,5 +21,28 @@ namespace RoomBooking.Logic
                 .Where(item => item.Hour > 14)
                 .ToList();
         }
+        public void AddBooking(string room, int hour)
+        {
+            if (string.IsNullOrEmpty(room))
+            {
+                return;
+            }
+
+            int nexId = _repository.GetAll().Count + 1;
+
+            _repository.Add(new Booking
+            {
+                Id = nexId,
+                Room = room,
+                Hour = hour
+            });
+        }
+
+        public bool IsRoomOccupied(string room, int hour)
+        {
+            List<Booking> allBookings = _repository.GetAll();
+
+            return allBookings.Any(b => b.Room == room && b.Hour == hour);
+        }
     }
 }

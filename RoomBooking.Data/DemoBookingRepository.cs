@@ -16,5 +16,10 @@ namespace RoomBooking.Data
                 new Booking { Id = 100, Room = "509", Hour = 22 }
             };
         }
+
+        public void Add(Booking item)
+        {
+            
+        }
     }
 }
